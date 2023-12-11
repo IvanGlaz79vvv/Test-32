@@ -34,7 +34,6 @@ public class Main {
                 .collect(Collectors.joining());
         System.out.println("responseString: \n" + responseString);
 
-        Gson gson = new Gson();
-        String json = gson.toJson(responseString);
+        Entity entity = new Entity()
     }
 }
