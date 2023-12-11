@@ -8,6 +8,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,6 +18,7 @@ public class Main {
     static List<Character.UnicodeBlock> listImages = new ArrayList<>();
 
     public static void main(String[] args) throws IOException {
+        //https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=UI3fltKQr4rR4INRLPgTorQjxkpIxTgT4oCqm8Jy
         String DEMO_KEY = "UI3fltKQr4rR4INRLPgTorQjxkpIxTgT4oCqm8Jy";
         URL url = new URL("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=" + DEMO_KEY);
 
@@ -34,6 +36,22 @@ public class Main {
                 .collect(Collectors.joining());
         System.out.println("responseString: \n" + responseString);
 
-        Entity entity = new Entity()
+        Entity entity = new Entity(
+                Date earth_date,
+                Object rover,
+        int id,
+        String name,
+        Date landing_date,
+        Date launch_datel,
+        Boolean status,
+        int max_sol,
+        Date max_date,
+        int total_photos,
+        Object cameras,
+        String full_name,
+        int sol,
+        Object camera,
+        String img_src
+        )
     }
 }
